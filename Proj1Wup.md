@@ -131,6 +131,7 @@ modFitrf3$finalModel
 ## E    0    0    1    3 1764 0.002262443
 ```
 
+This table shows predictions on the validation test set, to show the out-of-class errors for the `gbm` model.
 
 
 ```r
@@ -149,6 +150,8 @@ table(validation$classe, predgbmV2)
 ##   E    0    0    0   11 1071
 ```
 
+
+This table shows predictions on the validation test set, to show the out-of-class errors for the `rf` with `cv` model. **This was chosen to predict the testing set.**
 
 
 
@@ -170,6 +173,8 @@ table(validation$classe, predrfV3)
 ```
 
 
+The plot shows which classes were mispredicted, and the color shows the proper class in the validation set.
+
 
 ```r
 library(ggplot2)
@@ -179,6 +184,9 @@ qplot(predrfV3, classe, data=validation, col=classe)
 
 ![](./Proj1Wup_files/figure-html/unnamed-chunk-7-1.png) 
 
+Lastly, a table of both models on the validation set.
+
+The out-of-sample error estimate is `0.2%`.
 
 
 
