@@ -92,6 +92,7 @@ modFitrf3$finalModel
 
 ```
 
+This table shows predictions on the validation test set, to show the out-of-class errors for the `gbm` model.
 
 ```{r, cache=TRUE}
 
@@ -103,6 +104,8 @@ table(validation$classe, predgbmV2)
 
 ```
 
+
+This table shows predictions on the validation test set, to show the out-of-class errors for the `rf` with `cv` model. **This was chosen to predict the testing set.**
 
 
 
@@ -117,6 +120,8 @@ table(validation$classe, predrfV3)
 ```
 
 
+The plot shows which classes were mispredicted, and the color shows the proper class in the validation set.
+
 ```{r, cache=TRUE}
 
 library(ggplot2)
@@ -126,6 +131,7 @@ qplot(predrfV3, classe, data=validation, col=classe)
 
 ```
 
+Lastly, a table of both models on the vaidation set.
 
 
 ```{r, cache=TRUE}
