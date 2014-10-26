@@ -131,7 +131,9 @@ qplot(predrfV3, classe, data=validation, col=classe)
 
 ```
 
-Lastly, a table of both models on the vaidation set.
+Lastly, a table of both models on the validation set.
+
+The out-of-sample error estimate is `0.02%`.
 
 
 ```{r, cache=TRUE}
